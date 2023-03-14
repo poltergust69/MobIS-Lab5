@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "807220929867",
+    "project_id": "laboratoriska-mis",
+    "storage_bucket": "laboratoriska-mis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807220929867:android:4e9a53208ee1a1875274ce",
+        "android_client_info": {
+          "package_name": "com.example.laboratoriska"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807220929867-baonoc3gbfiqag94ja3rkm2d598eanps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXJc4tDeVyH2-elxU378gFxyeZfmmpkW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807220929867-baonoc3gbfiqag94ja3rkm2d598eanps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
