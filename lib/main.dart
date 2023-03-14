@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laboratoriska/Widgets/widget-tree.dart';
 import 'Pages/home-page.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // A widget which will be started on application startup
-      home: MyHomePage(),
+      home: WidgetTree(),
     );
   }
 }
