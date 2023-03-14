@@ -5,6 +5,7 @@ import 'package:syncfusion_flutter_calendar/calendar.dart';
 import '../Widgets/notification.dart';
 import '../Widgets/nov_termin.dart';
 import '../auth.dart';
+import 'map-page.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -23,23 +24,40 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
+  void _navigateToMapPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MapPage(termini: _termini),
+      ),
+    );
+  }
+
   final List<Termin> _termini = [
     Termin(id: 0,
         predmet: "Bazi na podatoci",
         datumOd: DateTime.parse('2023-03-22 14:00'),
-        datumDo: DateTime.parse('2023-03-22 16:00')),
+        datumDo: DateTime.parse('2023-03-22 16:00'),
+        latitude: double.parse('-27.7249'),
+        longitude: double.parse('132.2290')),
     Termin(id: 1,
         predmet: "Menadzment na informaciski sistemi",
         datumOd: DateTime.parse('2023-03-22 08:30'),
-        datumDo: DateTime.parse('2023-03-22 10:30')),
+        datumDo: DateTime.parse('2023-03-22 10:30'),
+        latitude: double.parse('-22.5046'),
+        longitude: double.parse('141.3540')),
     Termin(id: 2,
         predmet: "Programiranje video igri",
         datumOd: DateTime.parse('2023-03-26 20:00'),
-        datumDo: DateTime.parse('2023-03-26 22:00')),
+        datumDo: DateTime.parse('2023-03-26 22:00'),
+        latitude: double.parse('-37.5029'),
+        longitude: double.parse('143.3975')),
     Termin(id: 3,
         predmet: "Mobilni informaciski sistemi",
         datumOd: DateTime.parse('2023-03-03 02:15'),
-        datumDo: DateTime.parse('2023-03-03 04:00')),
+        datumDo: DateTime.parse('2023-03-03 04:00'),
+        latitude: double.parse('-22.8836'),
+        longitude: double.parse('115.9926')),
   ];
 
   void _addItemFunction(BuildContext ct) {
@@ -79,6 +97,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // The title text which will be shown on the action bar
         title: Text("Exam Schedules"),
         actions: <Widget>[
+          IconButton(
+            onPressed: _navigateToMapPage, // added button to navigate to map page
+            icon: Icon(Icons.map),
+          ),
           IconButton(
             onPressed: () => _addItemFunction(context),
             icon: Icon(Icons.add),
